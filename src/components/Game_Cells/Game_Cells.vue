@@ -16,7 +16,6 @@ const can_click = computed(() => {
     all_cells_filled.value ||
     (result.value.length && cells_per_line.value === MIN_CELLS_PER_LINE)
   ) {
-    console.log(result.value.length);
     return null;
   }
   return "click";
