@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(var(--cells-per-row, 3), 1fr);
+}
+
+.grid > .cell {
+  aspect-ratio: 1 / 1;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.cell.is--winner-move {
+  background-color: rgb(169, 255, 195);
+}

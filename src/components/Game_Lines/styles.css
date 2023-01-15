@@ -1,0 +1,11 @@
+.line {
+    position: absolute;
+    top: 0;
+    width: var(--grid-gap);
+    height: var(--game-width);
+    background-color: rebeccapurple;
+}
+
+.line:nth-child(odd) {
+    background-color: yellow;
+}

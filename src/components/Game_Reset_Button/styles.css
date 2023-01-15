@@ -1,0 +1,27 @@
+.button {
+    position: relative;
+    border: none;
+    display: inline-block;
+    background-color: var(--theme-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.button:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    inset: 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 4px solid black;
+    transition: opacity 0.1s ease-in;
+}
+
+.button:hover:after {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}

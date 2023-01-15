@@ -1,0 +1,14 @@
+header {
+  text-align: center;
+}
+
+main {
+  margin-top: var(--vertical-margin);
+}
+
+main > .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--vertical-margin);
+}
