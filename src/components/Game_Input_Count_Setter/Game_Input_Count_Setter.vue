@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 import {
   gameStore,
   MIN_CELLS_PER_LINE,
@@ -6,6 +7,7 @@ import {
 } from "../../stores/game-store";
 
 const { changeCellsPerLine } = gameStore();
+const value = ref(MIN_CELLS_PER_LINE);
 const onChange = (event) => void changeCellsPerLine(event.target.value);
 </script>
 
@@ -14,12 +16,15 @@ const onChange = (event) => void changeCellsPerLine(event.target.value);
     type="range"
     :min="MIN_CELLS_PER_LINE"
     :max="MAX_CELLS_PER_LINE"
-    value="3"
     id="count_setter"
     name="count_setter"
+    v-model="value"
     @change="onChange"
   />
-  <label for="count_setter"></label>
+  <label for="count_setter">
+    <span>{{ value }}</span>
+    <span>cells per row</span>
+  </label>
 </template>
 
 <style scoped>

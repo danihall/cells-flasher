@@ -1,15 +1,36 @@
 .grid {
+  position: relative;
   display: grid;
   gap: var(--grid-gap);
-  grid-template-columns: repeat(var(--cells-per-row, 3), 1fr);
+  grid-template-columns: repeat(var(--cells-per-line), 1fr);
+  margin-top: var(--vertical-margin);
 }
 
-.grid > .cell {
+.cell {
   aspect-ratio: 1 / 1;
-  background-color: antiquewhite;
+  font-size: 0;
   text-align: center;
+  color: transparent;
+  user-select: none;
+}
+
+.player-x {
+  background-color: rgb(255, 215, 15);
+}
+
+.player-o {
+  background-color: rgb(94, 74, 223);
 }
 
 .cell.is--winner-move {
-  background-color: rgb(169, 255, 195);
+  animation: flash .8s ease-in infinite;
+}
+
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
 }

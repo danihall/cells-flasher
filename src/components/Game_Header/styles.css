@@ -1,0 +1,8 @@
+header > h1 {
+    text-align: center;
+}
+
+header > .button-container {
+    margin-top: calc(var(--vertical-margin) * 3);
+    text-align: center;
+}

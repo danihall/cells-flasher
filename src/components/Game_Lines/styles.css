@@ -1,11 +1,35 @@
-.line {
+.lines {
     position: absolute;
-    top: 0;
-    width: var(--grid-gap);
-    height: var(--game-width);
-    background-color: rebeccapurple;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    pointer-events: none;
 }
 
-.line:nth-child(odd) {
-    background-color: yellow;
+.lines.are--horizontal {
+    flex-direction: column;
+}
+
+.lines > div {
+    background-color: var(--light);
+    animation: draw_line .5s ease-in-out forwards;
+}
+
+.lines.are--vertical > div {
+    flex: 0 0 var(--grid-gap);
+    transform-origin: bottom center;
+    transform: scale(1, 0);
+}
+
+.lines.are--horizontal > div {
+    height: var(--grid-gap);
+    transform-origin: left center;
+    transform: scale(0, 1);
+}
+
+@keyframes draw_line {
+    to {
+        transform: scale(1, 1);
+    }
 }

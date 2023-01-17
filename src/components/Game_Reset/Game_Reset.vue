@@ -1,12 +1,9 @@
 <script setup>
+import Game_Button from "../Game_Button/Game_Button.vue";
 import { gameStore } from "../../stores/game-store";
 const { reset } = gameStore();
 </script>
 
 <template>
-  <button class="button" @click="reset()">reset</button>
+  <Game_Button @on-click="reset()" text="reset" />
 </template>
-
-<style scoped>
-@import "./styles.css";
-</style>

@@ -1,14 +1,11 @@
-header {
-  text-align: center;
-}
-
 main {
   margin-top: var(--vertical-margin);
 }
 
-main > .footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: var(--vertical-margin);
+  padding: 0 var(--grid-gap);
 }

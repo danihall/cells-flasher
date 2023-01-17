@@ -1,7 +1,8 @@
 :root {
-  --vertical-margin: 25px;
-  --theme-color: rgb(185, 217, 246);
-  --grid-gap: 6px;
+  --vertical-margin: 45px;
+  --light: rgb(185, 217, 246);
+  --dark: grey;
+  --grid-gap: 2px;
   --game-width: 375px;
 }
 
@@ -12,6 +13,10 @@
   margin: 0;
   position: relative;
   font-weight: normal;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -26,5 +31,6 @@ body {
 
 #app {
   max-width: var(--game-width);
+  height: 100%;
   margin: 0 auto;
 }

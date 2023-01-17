@@ -2,7 +2,7 @@
     position: relative;
     border: none;
     display: inline-block;
-    background-color: var(--theme-color);
+    background-color: var(--light);
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 20px;

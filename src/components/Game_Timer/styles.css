@@ -1,0 +1,23 @@
+svg {
+  display: block;
+  margin: var(--vertical-margin) auto 0 auto;
+}
+
+svg > circle {
+  stroke: var(--light);
+  transform-origin: center center;
+  transform: rotate(-90deg);
+  animation: draw_dash var(--countdown-duration) linear forwards;
+}
+
+.player-lose {
+  margin: var(--vertical-margin) auto 0 auto;
+  height: 60px;
+  text-align: center;
+}
+
+@keyframes draw_dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -2,7 +2,7 @@ import { cellsLineChecker } from "./cellsLineChecker";
 /**
  * @param {Array} cells
  * @param {number} cells_per_line
- * @returns {Boolean}
+ * @returns {Array}
  */
 const computeResult = (cells, cells_per_line) => {
   let winning_lines = [];
